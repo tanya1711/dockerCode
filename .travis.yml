@@ -6,4 +6,4 @@ before_install:
   - docker build -t my_image -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true my_image npm run test 
+  - docker run my_image npm run test -- --coverage
